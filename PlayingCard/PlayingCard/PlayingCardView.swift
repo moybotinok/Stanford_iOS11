@@ -195,6 +195,8 @@ extension PlayingCardView {
             return "0"
         }
     }
+    
+    static let bigScale: CGFloat = 3.0
 }
 
 
@@ -231,5 +233,9 @@ extension CGPoint {
     }
 }
 
-
+extension CGFloat {
+    var arc4random: CGFloat {
+        return self * (CGFloat(arc4random_uniform(UInt32.max))/CGFloat(UInt32.max))
+    }
+}
 
